@@ -534,3 +534,76 @@ a:hover { text-decoration: underline; }
 }
 .site-footer .small { color: rgba(255,255,255,0.6); }
 .site-footer p { margin: 0 0 0.4rem; }
+
+/* Gallery */
+.gallery-block h2 { margin-bottom: 1.25rem; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.photo-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--off-white);
+}
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.photo-card figcaption {
+  padding: 0.75rem 1rem 1rem;
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.45;
+  font-family: 'Inter', sans-serif;
+}
+.photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  color: #fff;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+}
+.photo-placeholder .ph-icon {
+  font-size: 2.5rem;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+.photo-placeholder .ph-caption {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 0.95;
+  max-width: 22ch;
+}
+/* Gradient placeholder tones — rotate so each gallery has visual variety */
+.photo-placeholder.tone-0 { background: linear-gradient(135deg, #1d6f5e 0%, #2d8f7a 100%); }
+.photo-placeholder.tone-1 { background: linear-gradient(135deg, #b7842b 0%, #d6a348 100%); }
+.photo-placeholder.tone-2 { background: linear-gradient(135deg, #4a5d4f 0%, #6d7e6c 100%); }
+.photo-placeholder.tone-3 { background: linear-gradient(135deg, #8b4a3b 0%, #b06650 100%); }
+.photo-placeholder.tone-4 { background: linear-gradient(135deg, #3a5268 0%, #547592 100%); }
+.photo-placeholder.tone-5 { background: linear-gradient(135deg, #6b4e71 0%, #8e6d93 100%); }
+
+@media (max-width: 520px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
