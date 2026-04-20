@@ -701,7 +701,7 @@ a:hover { text-decoration: underline; }
   padding: 5rem 0 4rem;
   color: #fff;
 }
-.overview-hero .eyebrow { color: #e9cd96; }
+.overview-hero .eyebrow { color: #f0dba8; }
 .overview-hero h1 {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
   line-height: 1.05;
@@ -710,7 +710,7 @@ a:hover { text-decoration: underline; }
 .overview-hero .lead {
   font-size: 1.15rem;
   max-width: var(--measure-lead);
-  opacity: 0.95;
+  color: #fff;
 }
 .overview-stats {
   display: grid;
@@ -720,7 +720,7 @@ a:hover { text-decoration: underline; }
   padding: 0;
 }
 .overview-stats > div {
-  border-left: 3px solid #e9cd96;
+  border-left: 3px solid #f0dba8;
   padding: 0.15rem 0 0.15rem 0.9rem;
 }
 .overview-stats dt {
@@ -728,7 +728,7 @@ a:hover { text-decoration: underline; }
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #e9cd96;
+  color: #f0dba8;
   margin: 0;
 }
 .overview-stats dd {
@@ -923,6 +923,74 @@ a:hover { text-decoration: underline; }
   line-height: 1.55;
 }
 .region-hero .region-badge { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3); }
+
+/* Lodging card */
+.lodging-card {
+  background: var(--bg-card);
+  border: 2px solid var(--green);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.lodging-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green) 0%, var(--gold) 100%);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.lodging-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.lodging-icon { font-size: 1.4rem; }
+.lodging-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+}
+.lodging-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+  color: var(--green-dark);
+}
+.lodging-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 1rem;
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+}
+.lodging-details dt {
+  font-weight: 600;
+  color: var(--text);
+}
+.lodging-details dd {
+  margin: 0;
+  color: var(--text-muted);
+}
+.lodging-details a {
+  color: var(--green-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.lodging-tbd {
+  color: var(--gold-dark);
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0;
+}
 .region-travel-block { background: #f6f2e9; border-radius: 10px; padding: 1.25rem 1.5rem; }
 .region-next-steps { background: #fff; border: 1px solid #eae4d7; border-radius: 10px; padding: 1.5rem; margin-top: 1.5rem; }
 .region-next-steps code { background: #f1ece0; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
